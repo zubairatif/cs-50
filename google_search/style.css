@@ -1,0 +1,246 @@
+:root {
+    --black: #202124;
+    --white: #fafafa;
+    --text: var(--black);
+    --padding: 30px;
+}
+
+/** Remove all default styling */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: inherit;
+    font: inherit;
+
+}
+
+html {
+    /** Setting font-size to 10 pixels */
+    font-size: 62.5%;
+}
+
+/** Styling Links  */
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    text-decoration-color: inherit;
+}
+
+/** Styling the mic, search, apps, account profile buttons */
+
+button {
+    padding: .2em;
+    border: 0;
+    background: none;
+    cursor: pointer;
+}
+
+button:hover {
+    border-radius: 50%;
+    background: rgba(0, 0, 0, .2);
+}
+
+body {
+    /** Setting default font styling */
+    font-size: 1.5rem;
+    font-family: Arial, sans-serif;
+    color: var(--text);
+    /** Aligning header, footer and main_body in the middle */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+/** Styling the top bar (header) */
+header {
+    padding: var(--padding);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/** Align items vertically + add a gap */
+.header_right,
+.header_left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/** Centering the main search */
+.main_body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    align-self: center;
+    width: 700px;
+}
+
+/** Styling the GOOGLE img */
+.logo {
+    width: 272px;
+    margin-bottom: 20px;
+}
+
+.search_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+}
+
+.search_bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 5rem;
+    width: 600px;
+    border: 1px solid var(--text);
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+
+.search_input {
+    font-size: 1.8rem;
+    flex-grow: 1;
+    background: none;
+    border: none;
+}
+
+.search_input:focus {
+    outline: none;
+}
+
+.search_buttons {
+    width: 600px;
+    align-items: center;
+    justify-content: center;
+    height: 4rem;
+    display: flex;
+    gap: 20px;
+}
+
+.buttons {
+    padding: 7px 14px;
+    font-size: 1.4rem;
+    background: none;
+    border: none;
+}
+
+.buttons:hover {
+    border-radius: 20px;
+    cursor: pointer;
+    border: 1px solid var(--text);
+}
+
+
+
+
+footer {
+    padding: var(--padding);
+}
+
+/** Top footer row (div) */
+.footer_top {
+    width: 100vw;
+    /** border stretches full width */
+    margin: 0 0 20px -60px;
+    border-bottom: 2px solid #333;
+}
+
+/** Only country name*/
+.footer_country {
+    margin-left: var(--padding);
+    display: inline-block;
+    padding: 0 0 10px var(--padding);
+}
+
+/** Bottom row of footer */
+.footer_main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.footer_left,
+.footer_right {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+}
+
+.footer_left {
+    justify-content: flex-start;
+}
+
+.footer_right {
+    justify-content: flex-end;
+}
+
+/** Leaf icon before the carbon neutral */
+#leaf {
+    height: 1.4rem;
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 900px) {
+
+    .footer_mid {
+        display: flex;
+        order: -1;
+        flex: 1 1 600px;
+        margin-bottom: 20px;
+        justify-content: center;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .footer_main {
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+    }
+
+    .footer_right {
+        flex-basis: 400px;
+        justify-content: center;
+    }
+
+}
+
+@media (prefers-color-scheme: dark) {
+    .logo {
+        filter: brightness(100);
+    }
+
+    body {
+        background-color: var(--black);
+        --text: var(--white);
+    }
+
+    button:hover {
+        background: rgba(255, 255, 255, .2);
+    }
+}
