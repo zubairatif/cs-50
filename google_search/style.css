@@ -58,6 +58,7 @@ body {
     height: 100vh;
 }
 
+
 /** Styling the top bar (header) */
 header {
     padding: var(--padding);
@@ -188,12 +189,45 @@ footer {
 }
 
 .footer_right {
+    position: relative;
     justify-content: flex-end;
 }
 
 /** Leaf icon before the carbon neutral */
 #leaf {
     height: 1.4rem;
+}
+
+.settings_popup {
+    display: none;
+}
+
+.show_popup div>a {
+    font-size: 1.4rem;
+}
+
+.show_popup {
+    background: var(--white);
+    color: var(--text);
+    position: absolute;
+    bottom: 3rem;
+    /* width: 150px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 20px 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 1.2em #000;
+}
+
+.show_popup .dark_switch {
+    margin-top: 0.5rem;
+}
+
+.show_popup .dark_switch:hover {
+    cursor: pointer;
 }
 
 
@@ -230,7 +264,7 @@ footer {
 
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
     .logo {
         filter: brightness(100);
     }
@@ -243,4 +277,25 @@ footer {
     button:hover {
         background: rgba(255, 255, 255, .2);
     }
+
+    .show_popup {
+        --white: var(--black);
+    }
+} */
+
+body.dark .logo {
+    filter: brightness(100);
+}
+
+body.dark {
+    background-color: var(--black);
+    --text: var(--white) !important;
+}
+
+body:dark button:hover {
+    background: rgba(255, 255, 255, .2);
+}
+
+body.dark .show_popup {
+    --white: var(--black);
 }

@@ -30,35 +30,17 @@
   
         <!-- Search Starts -->
         <div class="search_box">
-          <form class="search_bar" action="https://www.google.com/search">
-            <button class="material-icons"> search </button>
-            <input list="queries" name="search" class="search_input" type="text" />
-            <datalist id="queries">
-              <option value="Apple"></option>
-              <option value="Ball"></option>
-              <option value="Cat"></option>
-              <option value="Dog"></option>
-              <option value="Elephant"></option>
-              <option value="Frog"></option>
-              <option value="Giraffe"></option>
-              <option value="House"></option>
-              <option value="Ice Cream"></option>
-              <option value="Jam"></option>
-              <option value="Kite"></option>
-              <option value="Lion"></option>
-              <option value="Money"></option>
-              <option value="Nest"></option>
-              <option value="Orange"></option>
-              <option value="Pen"></option>
-              <option value="Queen"></option>
-              <option value="Rocket"></option>
-            </datalist>
-            <button class="material-icons"> mic </button>
+          <form action="https://www.google.com/search">
+            <div class="search_bar" action="https://www.google.com/search">
+              <button class="material-icons"> search </button>
+              <input id="search" class="search_input" type="text" />
+              <button class="material-icons"> mic </button>
+            </div>
+            <div class="search_buttons">
+              <input class="buttons" role="button" type="Submit" value="Google Search">
+              <input class="buttons" role="button" value="I'm Feeling Lucky">
+            </div>
           </form>
-          <div class="search_buttons">
-            <input class="buttons" role="button" type="Submit" value="Google Search">
-            <input class="buttons" role="button" type="Submit" value="I'm Feeling Lucky">
-          </div>
         </div>
       </div>
         <!-- Search Ends -->
@@ -82,7 +64,16 @@
         <div class="footer_right">
           <a href="#">Privacy</a>
           <a href="#">Terms</a>
-          <a href="#">Settings</a>
+          <a onclick="displaySettings()" href="#">Settings</a>
+          <div class="settings_popup show_popup">
+            <div><a href="https://www.google.com/preferences">Search settings</a></div>
+            <div><a href="advanced.html">Advanced Search</a></div>
+            <div><a href="https://myaccount.google.com/yourdata/search">Your data in Search</a></div>
+            <div><a href="https://myactivity.google.com/product/search">Search History</a></div>
+            <div><a href="https://support.google.com/websearch/?">Search help</a></div>
+            <div><a href="https://support.google.com/websearch/">Send Feedback</a></div>
+            <div class="dark_switch"><a onclick="switchTheme()">Dark Theme</a></div>
+          </div>
         </div>
       </div>
     </footer>
@@ -90,23 +81,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <!-- <form action="https://www.google.com/search">
-            <input type="text" name="q">
-            <input type="submit" value="Google Search">
-        </form> -->
     </body>
     <script src="script.js"></script>
 </html>
