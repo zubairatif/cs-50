@@ -75,78 +75,6 @@ header {
     gap: 20px;
 }
 
-/** Centering the main search */
-.main_body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    justify-self: center;
-    align-self: center;
-    width: 700px;
-}
-
-/** Styling the GOOGLE img */
-.logo {
-    width: 272px;
-    margin-bottom: 20px;
-}
-
-.search_box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 600px;
-}
-
-.search_bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 5rem;
-    width: 600px;
-    border: 1px solid var(--text);
-    border-radius: 20px;
-    padding: 10px 20px;
-    margin-bottom: 20px;
-}
-
-.search_input {
-    font-size: 1.8rem;
-    flex-grow: 1;
-    background: none;
-    border: none;
-}
-
-.search_input:focus {
-    outline: none;
-}
-
-.search_buttons {
-    width: 600px;
-    align-items: center;
-    justify-content: center;
-    height: 4rem;
-    display: flex;
-    gap: 20px;
-}
-
-.buttons {
-    padding: 7px 14px;
-    font-size: 1.4rem;
-    background: none;
-    border: none;
-}
-
-.buttons:hover {
-    border-radius: 20px;
-    cursor: pointer;
-    border: 1px solid var(--text);
-}
-
-
-
 
 footer {
     padding: var(--padding);
@@ -193,42 +121,6 @@ footer {
     justify-content: flex-end;
 }
 
-/** Leaf icon before the carbon neutral */
-#leaf {
-    height: 1.4rem;
-}
-
-.settings_popup {
-    display: none;
-}
-
-.show_popup div>a {
-    font-size: 1.4rem;
-}
-
-.show_popup {
-    background: var(--white);
-    color: var(--text);
-    position: absolute;
-    bottom: 3rem;
-    /* width: 150px; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 2rem;
-    padding: 20px 20px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 1.2em #000;
-}
-
-.show_popup .dark_switch {
-    margin-top: 0.5rem;
-}
-
-.show_popup .dark_switch:hover {
-    cursor: pointer;
-}
 
 
 
@@ -264,24 +156,6 @@ footer {
 
 }
 
-/* @media (prefers-color-scheme: dark) {
-    .logo {
-        filter: brightness(100);
-    }
-
-    body {
-        background-color: var(--black);
-        --text: var(--white);
-    }
-
-    button:hover {
-        background: rgba(255, 255, 255, .2);
-    }
-
-    .show_popup {
-        --white: var(--black);
-    }
-} */
 
 body.dark .logo {
     filter: brightness(100);
